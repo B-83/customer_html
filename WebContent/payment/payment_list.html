@@ -9,7 +9,7 @@
 	<script src="/js/jquery-3.1.1.js"></script>
 	<script src="/js/tether.js"></script>
 	<script src="/js/bootstrap.js"></script>
-	<script src="/js/customer.js"></script>
+	<script src="/js/table_size.js"></script>
 </head>
 
 <body>
@@ -214,7 +214,7 @@
         <tbody>
           <tr>
             <td><a>1</a></td>
-            <td><a href="/customer/customer.html">顧客データ</a></td>
+            <td><a href="/customer/detail.html">顧客データ</a></td>
             <td><a href="/slip/slip_list.html">2017/02</a></td>
             <td>108,000</td>
             <td>8,000</td>
@@ -492,18 +492,17 @@
          <span aria-hidden="true">&times;</span>
        </button>
      </div>
-     <div class="modal-body">
-       <form>
+     <div class="modal-body modal-body-admin">
+       <form class="modal-middle">
          <div class="form-group">
            <label for="payment_amount">入金額 :</label>
            <input type="text" class="form-control dialog-input" id="payment_amount" value="30,000">
-           <span>円</span>
-          </div>
+         </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#payment_amount-check" data-whatever="30000">確認</button>
+        <button type="button" class="btn btn-secondary btn-dialog" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#payment_amount-check" data-whatever="30000">確認</button>
       </div>
     </div>
   </div>
@@ -519,8 +518,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <form>
+      <div class="modal-body modal-body-admin">
+        <form class="modal-middle">
           <div class="form-group">
             	入金額 : 30,000
             	<input type="hidden" value="30000">
@@ -528,8 +527,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#payment_amount" data-whatever="30000">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#payment_amount-finish">OK</button>
+        <button type="button" class="btn btn-secondary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#payment_amount" data-whatever="30000">キャンセル</button>
+        <button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#payment_amount-finish">OK</button>
       </div>
     </div>
   </div>
@@ -542,9 +541,9 @@
       <div class="modal-header">
         <h5 class="modal-title" id="PaymentAmountCheckLabel">保存完了</h5>
       </div>
-     	<div class="modal-body">保存しました。</div>
+     	<div class="modal-body ">保存しました。</div>
      	<div class="modal-footer">
-     		<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+     		<button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal">OK</button>
      	</div>
   	</div>
  	</div>

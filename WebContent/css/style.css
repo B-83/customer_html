@@ -29,6 +29,9 @@ h5 {
 .btn-search {
 	margin-bottom: 8px;
 }
+.btn-dialog {
+	width: 110px;
+}
 .user-address {
 	color: #5cb85c;
 }
@@ -76,7 +79,7 @@ table {
 	background-color: rgba(0, 0, 0, 0.03);
 	width: 148px;
 }
-/* 管理者データ画面のtable > th,td */
+/* 管理者データ画面の編集カラム */
 .admin-table tr th:nth-of-type(4) {
 	background-color: #859994;
 	color: #ffffff;
@@ -98,7 +101,7 @@ table {
 
 /* 自動入力ボタン */
 .table-list .auto-insert {
-	padding: 0.25rem 0.8rem 0.1rem
+	padding: 0.25rem 0.8rem 0.1rem;
 	width: 130px;
 }
 

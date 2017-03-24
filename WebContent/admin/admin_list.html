@@ -9,7 +9,7 @@
 	<script src="/js/jquery-3.1.1.js"></script>
 	<script src="/js/tether.js"></script>
 	<script src="/js/bootstrap.js"></script>
-	<script src="/js/customer.js"></script>
+	<script src="/js/table_size.js"></script>
 </head>
 
 <body>
@@ -218,18 +218,18 @@
       <div class="modal-body modal-body-admin">
         <form method="post" class="modal-middle">
 			  <div class="form-group">
-			    <label for="exampleInputEmail1">メールアドレス</label>
+			    <label for="entry-mail_address">メールアドレス</label>
 			    <input type="email" class="form-control" id="entry-mail_address" aria-describedby="emailHelp">
 			  </div>
 			  <div class="form-group">
-			    <label for="exampleInputPassword1">パスワード</label>
+			    <label for="entry-password">パスワード</label>
 			    <input type="password" class="form-control" id="entry-password">
 			  </div>
 			  </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#admin-entry-edit-check">確認</button>
+        <button type="button" class="btn btn-secondary btn-dialog" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#admin-entry-edit-check">確認</button>
       </div>
     </div>
   </div>
@@ -258,8 +258,8 @@
 			  </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#admin-entry-edit-check">確認</button>
+        <button type="button" class="btn btn-secondary btn-dialog" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#admin-entry-edit-check">確認</button>
       </div>
     </div>
   </div>
@@ -288,8 +288,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#admin-edit" data-whatever="30000">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#admin-entry-edit-finish">OK</button>
+        <button type="button" class="btn btn-secondary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#admin-edit" data-whatever="30000">キャンセル</button>
+        <button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#admin-entry-edit-finish">OK</button>
       </div>
     </div>
   </div>
@@ -306,7 +306,7 @@
      		<span class="modal-middle">保存しました。</span>
      	</div>
      	<div class="modal-footer">
-     		<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+     		<button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal">OK</button>
      	</div>
   	</div>
  	</div>
@@ -332,8 +332,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#admin-delete-finish">OK</button>
+        <button type="button" class="btn btn-secondary btn-dialog" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal" data-toggle="modal" data-target="#admin-delete-finish">OK</button>
       </div>
     </div>
   </div>
@@ -350,7 +350,7 @@
      		<span class="modal-middle">削除しました。</span>
      	</div>
      	<div class="modal-footer">
-     		<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+     		<button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal">OK</button>
      	</div>
   	</div>
  	</div>
