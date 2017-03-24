@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>入金管理システム</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/js/jquery-3.1.1.js"></script>
+	<script src="/js/tether.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/customer.js"></script>
+</head>
+
+<body>
+<!-- タイトルバー -->
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/">入金管理システム</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<a class="user-address" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ログイン中　：　abc@defghij.jp</a>
+		<div class="dropdown-menu">
+		  <a class="dropdown-item" href="#">ログアウト</a>
+		</div>
+  </div>
+</nav>
+
+<!-- コンテンツ -->
+<div class="container-fluid">
+  <div class="row">
+  <!-- サイドメニュー -->
+    <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">顧客データ<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/payment/payment_list.html">入金データ</a>
+        </li>
+      </ul>
+
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/admin_list.html">管理者データ</a>
+        </li>
+      </ul>
+    </nav>
+
+<!-- メインコンテンツ -->
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+
+<!-- テーブル -->
+    <h5>削除しました。</h5>
+    <button type="button" class="btn btn-secondary" onclick="location.href='/'">顧客データ一覧へ</button>
+</main>
+  </div>
+</div>
+</body>
+</html>
