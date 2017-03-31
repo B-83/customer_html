@@ -76,7 +76,7 @@ body {
 	box-sizing: content-box;
 	transition: height 0.35s ease;
 }
-.admin-table {
+.table-cover {
 	box-sizing: content-box;
 	overflow-y: scroll;
 	width: 100%;
@@ -104,4 +104,11 @@ a.page-link {
 }
 .modal-middle input {
 	width: 400px;
+}
+
+
+/* 顧客詳細ページの削除ダイアログ */
+.customer-span {
+	display: inline-block;
+	width: 60px;
 }

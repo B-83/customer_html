@@ -54,7 +54,7 @@
   
 <!-- テーブル -->
     <h5>新規登録</h5><span class="explain">入力終了後、「確認」をクリックしてください。</span>
-    <form method="post" id="entry">
+    <form id="entry">
     <button type="button" class="btn btn-info btn-right btn-margin-left btn-margin-bottom" onclick="location.href='/customer/check.html'">確認</button></form>
     <button type="button" class="btn btn-secondary btn-right btn-margin-bottom" onclick="location.href='/'">戻る</button>
     <div class="table">
@@ -62,16 +62,19 @@
       	<tbody>
           <tr>
           	<th>名称</th>
-            <td><input class="input-width-max" type="text" form="entry" name="name" /></td>
+            <td><input class="width-650" type="text" form="entry" name="name"  maxlength="40"/>
+            <span style="visibility : hidden; color: red; margin-left: 10px;">必須項目です。</span></td>
           </tr>
           <tr>
          		<th>かな</th> 
-            <td><input class="input-width-max" type="text" form="entry" name="kana" /></td>
+            <td><input class="width-650" type="text" form="entry" name="kana" />
+            <span style="visibility : hidden; color: red; margin-left: 10px;">必須項目です。</span></td>
           </tr>
           <tr>
-          	<th>郵便番号</th>
-            <td><input class="width-100" type="text" form="entry" name="postal_code" />
-            <button class="btn auto-insert">住所自動入力</button></td>
+          	<th>郵便番号<small>&emsp;※半角数字</small></th>
+            <td><input class="width-100" type="text" form="entry" name="postal_code" maxlength="7" />
+            <button class="btn auto-insert">住所自動入力</button>
+            <span style="visibility : hidden; color: red; margin-left: 10px;">正しい郵便番号を入力してください。</span></td>
           </tr>
           <tr>
           	<th>住所1</th>
@@ -84,15 +87,17 @@
           </tr>
           <tr>
             <th>住所2</th>
-            <td><input class="input-width-max" type="text" form="entry" name="address2" /></td>
+            <td><input class="input-width-max" type="text" form="entry" name="address2" maxlength="100" /></td>
           </tr>
           <tr>
-            <th>電話番号</th>
-            <td><input class="width-150" type="text" form="entry" name="tel" /></td>
+            <th>電話番号<small>&emsp;※半角数字</small></th>
+            <td><input class="width-150" type="text" form="entry" name="tel" maxlength="14" />
+						<span style="visibility : hidden; color: red; margin-left: 10px;">正しい電話番号を入力してください。</span></td>
           </tr>
           <tr>
-            <th>FAX番号</th>
-            <td><input class="width-150" type="text" form="entry" name="fax" /></td>
+            <th>FAX番号<small>&emsp;※半角数字</small></th>
+            <td><input class="width-150" type="text" form="entry" name="fax" maxlength="14" />
+						<span style="visibility : hidden; color: red; margin-left: 10px;">正しいFAX番号を入力してください。</span></td>
           </tr>
           <tr>
             <th>税区分</th>

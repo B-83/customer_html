@@ -10,7 +10,7 @@
 	<script src="/js/tether.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/table_size.js"></script>
-	<script src="/js/saved_dialog.js"></script>
+	<script src="/js/saved_throw.js"></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
 
 <!-- テーブル -->
     <h5>この内容でよろしいですか？</h5>
-    <form method="post" id="entry">
+    <form id="entry">
     	<button type="button" id="customer-finish-btn" class="btn btn-info btn-right btn-margin-left btn-margin-bottom">OK</button>
       <input type="hidden" name="name" value="" />
       <input type="hidden" name="kana" value="" />
@@ -82,7 +82,7 @@
           </tr>
           <tr>
           	<th>郵便番号</th>
-            <td>0000000</td>
+            <td>000-0000</td>
           </tr>
           <tr>
           	<th>住所1</th>
@@ -94,19 +94,19 @@
           </tr>
           <tr>
             <th>電話番号</th>
-            <td>000-0000-0000</td>
+            <td>00000000000</td>
           </tr>
           <tr>
             <th>FAX番号</th>
-            <td>000-0000-0000</td>
+            <td>00000000000</td>
           </tr>
           <tr>
             <th>税区分</th>
-            <td>1</td>
+            <td>1 : 切捨て</td>
           </tr>
           <tr>
             <th>丸め方法</th>
-            <td>1</td>
+            <td>1 : 明細行</td>
           </tr>
           <tr>
             <th>締め日</th>

@@ -3,13 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>入金管理システム</title>
+	<link rel="stylesheet" href="/css/jquery-ui.css">
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/layout.css">
 	<link rel="stylesheet" href="/css/style.css">
+	
 	<script src="/js/jquery-3.1.1.js"></script>
+	<script src="/js/jquery-ui.js"></script>
 	<script src="/js/tether.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/table_size.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	  // 候補リストに表示するデータを配列で準備
+	  var name_list = [
+	    '顧客データ',
+	    '株式会社W・I・Z',
+	    'テストデータ03',
+	    'テストデータ04'
+	  ];
+	  
+	  var kana_list = [
+	    'こきゃくでーた',
+	    'かぶしきがいしゃうぃず',
+	    'てすとでーたさん',
+	    'てすとでーたよん'
+	  ];
+	  
+	
+	  // オートコンプリート機能を適用
+	  $('#customer_name').autocomplete({
+	    source: name_list,
+	    autoFocus: true,
+	    delay: 300,
+	    minLength: 2
+	  });
+	  
+	  $('#customer_kana').autocomplete({
+		    source: kana_list,
+		    autoFocus: true,
+		    delay: 300,
+		    minLength: 3
+		  });
+	});
+	</script>
 </head>
 
 <body>
@@ -64,26 +101,21 @@
         
         <div id="collapse" class="collapse show search-list" role="tabpanel" aria-labelledby="heading">
           <div class="card-block-sm">
-          <form method="post" id="form-search" class="form-scroll">
+          <form id="form-search" class="form-scroll">
 						<div class="form-group-sm row">
 						  <label for="name" class="col-2 col-form-label">顧客名称</label>
 						  <div class="col-10">
-						    <input id="name" type="text" class="form-control" name="name" autocomplete="on" list="name_list" />
-		            <datalist id="name_list">
-									<option value="顧客データ">
-									<option value="テストデータ2">
-									<option value="テストデータ3">
-								</datalist>
+						    <input id="customer_name" class="form-control" type="search" name="name" />
 						  </div>
 						</div>
 						<div class="form-group-sm row">
 						  <label for="kana" class="col-2 col-form-label">顧客名称（かな）</label>
 						  <div class="col-10">
-						    <input id="kana" class="form-control" type="search">
+						    <input id="customer_kana" class="form-control" type="search" name="kana">
 						  </div>
 						</div>
 						<div class="form-group-sm row">
-						  <label for="postal_code" class="col-2 col-form-label">郵便番号</label>
+						  <label for="postal_code" class="col-2 col-form-label">郵便番号<small>&emsp;※数字のみ</small></label>
 						  <div class="col-2">
 						    <input id="postal_code" class="form-control" type="search">
 						  </div>
@@ -105,12 +137,12 @@
 						  </div>
 						</div>
 						<div class="form-group-sm row">
-						  <label for="tel" class="col-2 col-form-label">電話番号</label>
+						  <label for="tel" class="col-2 col-form-label">電話番号<small>&emsp;※数字のみ</small></label>
 						  <div class="col-2">
 						    <input id="tel" class="form-control" type="search">
 						  </div>
 						  <div class="col-1"></div>
-						  <label for="fax" class="col-2 col-form-label">FAX番号</label>
+						  <label for="fax" class="col-2 col-form-label">FAX番号<small>&emsp;※数字のみ</small></label>
 						  <div class="col-2">
 						    <input id="fax" class="form-control" type="search">
 						  </div>
@@ -171,19 +203,6 @@
 						    </select>
 						  </div>
 						</div>
-						<div class="form-group-sm row">
-				      <label class="col-2">支払い</label>
-				      <div class="form-check form-check-inline form-padding">
-							  <label class="form-check-label">
-							    <input class="form-check-input" type="checkbox" id="paid_up" value="option1" checked> 支払済
-							  </label>
-							</div>
-							<div class="form-check form-check-inline">
-							  <label class="form-check-label">
-							    <input class="form-check-input" type="checkbox" id="unpaid" value="option2" checked> 未払い
-							  </label>
-							</div>
-				   	</div>
 					</form>
 					<hr />
           <button type="button" class="btn btn-primary btn-right btn-margin-left" onclick="location.href='/'">検　索</button>
@@ -458,24 +477,31 @@
     
     <!-- ページネーション -->
 	  <div>
-	   	<ul class="pagination justify-content-center">
-	     	<li class="page-item">
-	      	 <a class="page-link" href="#" aria-label="Previous">
-	       	  <span aria-hidden="true">&laquo;</span>
-	      	   <span class="sr-only">Previous</span>
-	     	  </a>
-	     	</li>
-	     	<li class="page-item"><a class="page-link" href="#">1</a></li>
-	 	      <li class="page-item"><a class="page-link" href="#">2</a></li>
-	     	<li class="page-item"><a class="page-link" href="#">3</a></li>
-	     	<li class="page-item">
-	       	<a class="page-link" href="#" aria-label="Next">
-	         	<span aria-hidden="true">&raquo;</span>
-	         	<span class="sr-only">Next</span>
-	      	</a>
-	    	</li>
-	  	</ul>
-		</div>
+		    <ul class="pagination justify-content-center">
+		      <!-- 戻るボタン
+		      <li class="page-item">
+		        <a class="page-link" href="#" aria-label="Previous">
+		          <span aria-hidden="true">Prev</span>
+		        </a>
+		      </li>
+		      -->
+		      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+	   	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+		      <li class="page-item"><a class="page-link" href="#">3</a></li>
+		      <li class="page-item"><a class="page-link" href="#">4</a></li>
+		      <li class="page-item"><a class="page-link" href="#">5</a></li>
+		      <li class="page-item"><a class="page-link" href="#">6</a></li>
+		      <li class="page-item"><a class="page-link" href="#">7</a></li>
+		      <li class="page-item"><a class="page-link" href="#">8</a></li>
+		      <li class="page-item"><a class="page-link" href="#">9</a></li>
+		      <li class="page-item"><a class="page-link" href="#">10</a></li>
+		      <li class="page-item">
+		        <a class="page-link" href="#" aria-label="Next">
+		          <span aria-hidden="true">Next</span>
+		        </a>
+		      </li>
+		    </ul>
+		  </div>
 </main>
   </div>
 </div>
@@ -541,7 +567,9 @@
       <div class="modal-header">
         <h5 class="modal-title" id="PaymentAmountCheckLabel">保存完了</h5>
       </div>
-     	<div class="modal-body ">保存しました。</div>
+     	<div class="modal-body modal-body-admin">
+     		<span class="modal-middle">保存しました。</span>
+     	</div>
      	<div class="modal-footer">
      		<button type="button" class="btn btn-primary btn-dialog" data-dismiss="modal">OK</button>
      	</div>

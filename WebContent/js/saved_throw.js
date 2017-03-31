@@ -10,15 +10,3 @@ $(function(){
 		location.href = '/customer/detail.html?saved=true';
 	})
 });
-
-/* クエリを取得してダイアログの表示 */
-$(function(){
-	
-	if (location.search != '') {
-		
-		var customerSth = location.search.match(/saved=(.*?)(&|$)/)[1];
-		if  (customerSth) {
-			$('#customer-entry-edit-finish').modal();
-		}
-	}
-});
